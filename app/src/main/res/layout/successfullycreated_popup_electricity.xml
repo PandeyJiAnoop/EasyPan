@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    app:cardElevation="20dp"
+    android:layout_margin="2dp"
+    app:cardCornerRadius="20dp"
+    android:layout_gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:padding="10dp"
+        android:layout_height="wrap_content">
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/cross_img"
+            android:background="#12C06A"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_150sdp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:src="@drawable/successgif" />
+        <TextView
+            android:id="@+id/txt_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textColor="#0A144C"
+            android:textSize="21sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/id_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+        <Button android:id="@+id/pass_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Open Receipt"  android:autoLink="web"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textSize="16sp"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnDialog"
+            android:layout_width="200dp"
+            android:layout_height="45dp"
+            android:layout_margin="14dp"
+            android:backgroundTint="@color/red"
+            android:background="@drawable/buttn"
+            android:text="Exit"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*Please take a screenshot if you have any issue during payment"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textColor="@color/red"
+            android:textSize="12sp"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

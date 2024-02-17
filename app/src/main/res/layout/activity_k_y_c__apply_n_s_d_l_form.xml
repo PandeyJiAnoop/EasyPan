@@ -1,0 +1,958 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:background="@color/colorAccent"
+        android:layout_height="50dp">
+        <ImageView
+            android:id="@+id/sliding_menu"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:tint="@color/white"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_arrow_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="New Pan Application"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_below="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout  android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="#90FFFFFF"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout android:visibility="gone"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:layout_height="30dp">
+                    <CheckBox
+                        android:id="@+id/chk1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:textSize="12sp"
+                        android:textColor="#000"
+                        android:text="Have you belong from Asam OR jammu &amp; Kashmir" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="Select Category *"
+                            android:textColor="#898989" />
+
+                        <LinearLayout
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/background_shape"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                                android:id="@+id/cat_spinner"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center_vertical"></com.toptoche.searchablespinnerlibrary.SearchableSpinner>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:orientation="vertical"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:text="Select Gender *"
+                                android:textColor="#898989" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="45dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/background_shape"
+                                android:gravity="center"
+                                android:orientation="vertical">
+                                <com.toptoche.searchablespinnerlibrary.SearchableSpinner android:id="@+id/gender_sp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center_vertical"
+                                    android:gravity="center_vertical"></com.toptoche.searchablespinnerlibrary.SearchableSpinner>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <EditText android:id="@+id/dob_et"
+                            android:drawableTint="#898989"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:drawableLeft="@drawable/ic_user"
+                            android:textSize="13sp" android:padding="7dp"
+                            android:textColor="@color/black"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:focusable="false"
+                            android:hint="Date Of birth"
+                            android:singleLine="true" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <EditText android:id="@+id/f_name_et"
+                            android:drawableTint="#898989"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:drawableLeft="@drawable/ic_user"
+                            android:textSize="13sp" android:padding="7dp"
+                            android:textColor="@color/black"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:hint="First Name"
+                            android:singleLine="true" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content">
+                        <EditText android:drawableTint="#898989"
+                            android:drawablePadding="@dimen/_5sdp" android:id="@+id/m_name_et"
+                            android:drawableLeft="@drawable/ic_user"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:hint="Middle Name"
+                            android:inputType="text"
+                            android:textSize="13sp" android:padding="7dp"
+                            android:textColor="@color/black"
+                            android:singleLine="true" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <EditText android:id="@+id/l_name_et"
+                            android:drawableTint="#898989"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:drawableLeft="@drawable/ic_user"
+                            android:textSize="13sp" android:padding="7dp"
+                            android:textColor="@color/black"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:hint="Last name"
+                            android:singleLine="true" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content">
+                        <EditText android:drawableTint="#898989"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:drawableLeft="@drawable/ic_user__3_"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:id="@+id/father_fname"
+                            android:hint="Father first name"
+                            android:inputType="text"
+                            android:textSize="13sp" android:padding="7dp"
+                            android:textColor="@color/black"
+                            android:singleLine="true" />
+
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <EditText android:id="@+id/father_m_name_et"
+                            android:drawableTint="#898989"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:drawableLeft="@drawable/ic_user__3_"
+                            android:textSize="13sp" android:padding="7dp"
+                            android:textColor="@color/black"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:hint="Father Middle name"
+                            android:singleLine="true" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content">
+                        <EditText android:drawableTint="#898989"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:drawableLeft="@drawable/ic_user__3_"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp" android:id="@+id/father_l_name_et"
+                            android:hint="Father Last Name"
+                            android:inputType="text"
+                            android:textSize="13sp" android:padding="7dp"
+                            android:textColor="@color/black"
+                            android:singleLine="true" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <EditText android:id="@+id/mob_et"
+                            android:drawableTint="#898989"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:drawableLeft="@drawable/ic_call"
+                            android:textSize="13sp" android:padding="7dp"
+                            android:textColor="@color/black"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:maxLength="10"
+                            android:hint="Phone No" android:inputType="number"
+                            android:singleLine="true" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content">
+                        <EditText android:drawableTint="#898989"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:drawableLeft="@drawable/ic_email_24dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:hint="Email" android:id="@+id/email_et"
+                            android:inputType="textEmailAddress"
+                            android:textSize="13sp" android:padding="7dp"
+                            android:textColor="@color/black"
+                            android:singleLine="true" />
+
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <EditText android:inputType="number"
+                            android:maxLength="12"
+                            android:id="@+id/aadhar_et"
+                            android:drawableTint="#898989"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:drawableLeft="@drawable/ic_baseline_menu_book_24"
+                            android:textSize="13sp" android:padding="7dp"
+                            android:textColor="@color/black"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:hint="Aadhar Number"
+                            android:singleLine="true" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content">
+                        <EditText android:drawableTint="#898989"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:drawableLeft="@drawable/ic_baseline_menu_book_24"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:hint="Name on pancard"
+                            android:inputType="text" android:id="@+id/name_on_pan_et"
+                            android:textSize="13sp" android:padding="7dp"
+                            android:textColor="@color/black"
+                            android:singleLine="true" />
+
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <EditText android:id="@+id/name_on_aadhar_et"
+                            android:drawableTint="#898989"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:drawableLeft="@drawable/ic_baseline_menu_book_24"
+                            android:textSize="13sp" android:padding="7dp"
+                            android:textColor="@color/black"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:hint="Name as per aadhar"
+                            android:singleLine="true" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content">
+                        <EditText android:drawableTint="#898989"
+                            android:drawablePadding="@dimen/_5sdp" android:id="@+id/address_et"
+                            android:drawableLeft="@drawable/ic_location"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:hint="Address Communication"
+                            android:inputType="text"
+                            android:textSize="13sp" android:padding="7dp" 
+                            android:textColor="@color/black"
+                            android:singleLine="true" />
+
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical"
+                    android:layout_width="match_parent" android:layout_marginTop="5dp"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="Address Proof *"
+                        android:textColor="#898989" />
+
+                    <LinearLayout
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/background_shape"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <!--                            android:entries="@array/items_idproof"-->
+                        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                            android:layout_width="match_parent" android:id="@+id/address_proof_sp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_vertical"></com.toptoche.searchablespinnerlibrary.SearchableSpinner>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="DOB Proof *"
+                        android:textColor="#898989" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/background_shape"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" android:id="@+id/dob_proof_sp"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_vertical"></com.toptoche.searchablespinnerlibrary.SearchableSpinner>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="Identity Proof *"
+                        android:textColor="#898989" />
+
+                    <LinearLayout
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/background_shape"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" android:id="@+id/identity_sp"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_vertical"></com.toptoche.searchablespinnerlibrary.SearchableSpinner>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="7dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp">
+                    <LinearLayout
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content">
+                        <EditText android:drawableTint="#898989"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:drawableLeft="@drawable/ic_location"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:hint="Pincode" android:id="@+id/pincode_et"
+                            android:inputType="number" android:maxLength="10"
+                            android:textSize="13sp" android:padding="7dp"
+                            android:textColor="@color/black"
+                            android:singleLine="true" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="7dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <com.toptoche.searchablespinnerlibrary.SearchableSpinner android:background="@drawable/background_shape"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:hint="State"
+                            android:id="@+id/stateet"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content">
+                        <EditText android:drawableTint="#898989"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:drawableLeft="@drawable/ic_business"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp" android:maxLength="6"
+                            android:hint="Pan Processing Fee"
+                            android:focusable="false"
+                            android:text="107" android:clickable="false"
+                            android:inputType="number" android:id="@+id/pan_processing_fee_et"
+                            android:textSize="13sp" android:padding="7dp"
+                            android:textColor="@color/black"
+                            android:singleLine="true" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_marginTop="7dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <EditText android:drawableTint="#898989"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:drawableLeft="@drawable/home_selector"
+                            android:textSize="13sp" android:padding="7dp"
+                            android:textColor="@color/black"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:hint="Building/Village"
+                           android:id="@+id/building_et"
+                            
+                            android:singleLine="true" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content">
+                        <EditText android:drawableTint="#898989"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:drawableLeft="@drawable/ic_account_details"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:hint="Road/Post office"
+                            android:inputType="text" android:id="@+id/post_office_et"
+                            android:textSize="13sp" android:padding="7dp"
+                            android:textColor="@color/black"
+                            android:singleLine="true" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="7dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <EditText android:drawableTint="#898989"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:drawableLeft="@drawable/ic_location"
+                            android:textSize="13sp" android:padding="7dp"
+                            android:textColor="@color/black"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:hint="Locality/Sub division"
+                           android:id="@+id/location_et"
+                            
+                            android:singleLine="true" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content">
+                        <EditText android:drawableTint="#898989"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:drawableLeft="@drawable/ic_location_24dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:hint="City/Distric"
+                            android:inputType="text" android:id="@+id/city_et"
+                            android:textSize="13sp" android:padding="7dp"
+                            android:textColor="@color/black"
+                            android:singleLine="true" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="7dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <EditText android:drawableTint="#898989"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:drawableLeft="@drawable/ic_downline"
+                            android:textSize="13sp" android:padding="7dp"
+                            android:textColor="@color/black"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:hint="Area Code"
+                            android:id="@+id/area_code_et"
+                            android:singleLine="true" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content">
+                        <EditText android:drawableTint="#898989"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:drawableLeft="@drawable/ic_history"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:hint="AO Type"  android:id="@+id/ao_type_et"
+                            android:inputType="text"
+                            android:textSize="13sp" android:padding="7dp"
+                            android:textColor="@color/black"
+                            android:singleLine="true" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="7dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <EditText android:drawableTint="#898989"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:drawableLeft="@drawable/ic_edit"
+                            android:textSize="13sp" android:padding="7dp"
+                            android:textColor="@color/black"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:hint="Range Code"
+                            android:id="@+id/range_code_et"
+                            android:singleLine="true" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content">
+                        <EditText android:drawableTint="#898989"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:drawableLeft="@drawable/ic_plot"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:hint="AO Number"
+                            android:inputType="text" android:id="@+id/ao_number_et"
+                            android:textSize="13sp" android:padding="7dp"
+                            android:textColor="@color/black"
+                            android:singleLine="true" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:background="@drawable/rectangle"
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:text="Note: Aadhar is mandatory for Pan Card, this application is Acknowledgment Only, You Will Have a Completed Filled Pan Form Along With Valid Documents to the Reg. Office."
+                    android:layout_height="wrap_content">
+                </TextView>
+
+
+                <LinearLayout
+                    android:layout_marginTop="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="Select App Type*"
+                            android:textColor="#898989" />
+                        <LinearLayout
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/background_shape"
+                            android:gravity="center"
+                            android:orientation="vertical">
+                            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                                android:id="@+id/cat_formtype"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center_vertical"></com.toptoche.searchablespinnerlibrary.SearchableSpinner>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout android:visibility="gone"
+                android:layout_margin="10dp"
+                android:id="@+id/minor_ll"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical"
+                    android:layout_width="match_parent" android:layout_marginTop="5dp"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="Title*"
+                        android:textColor="#898989" />
+
+                    <LinearLayout
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/background_shape"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <!--                            android:entries="@array/items_idproof"-->
+                        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                            android:layout_width="match_parent" android:id="@+id/sp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_vertical"></com.toptoche.searchablespinnerlibrary.SearchableSpinner>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <EditText android:id="@+id/rep_f_name_et"
+                            android:drawableTint="#898989"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:drawableLeft="@drawable/ic_user"
+                            android:textSize="13sp" android:padding="7dp"
+                            android:textColor="@color/black"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:hint="First Name"
+                            android:singleLine="true" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content">
+                        <EditText android:drawableTint="#898989"
+                            android:drawablePadding="@dimen/_5sdp" android:id="@+id/rep_m_name_et"
+                            android:drawableLeft="@drawable/ic_user"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:hint="Middle Name"
+                            android:inputType="text"
+                            android:textSize="13sp" android:padding="7dp"
+                            android:textColor="@color/black"
+                            android:singleLine="true" />
+
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <EditText android:id="@+id/rep_l_name_et"
+                            android:drawableTint="#898989"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:drawableLeft="@drawable/ic_user"
+                            android:textSize="13sp" android:padding="7dp"
+                            android:textColor="@color/black"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:hint="Last name"
+                            android:singleLine="true" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content">
+                        <EditText android:drawableTint="#898989"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:drawableLeft="@drawable/ic_location"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:id="@+id/rep_pincode"
+                            android:hint="Pincode"
+                            android:inputType="text"
+                            android:textSize="13sp" android:padding="7dp"
+                            android:textColor="@color/black"
+                            android:singleLine="true" />
+
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <EditText android:id="@+id/rep_state"
+                            android:drawableTint="#898989"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:drawableLeft="@drawable/ic_location_24dp"
+                            android:textSize="13sp" android:padding="7dp"
+                            android:textColor="@color/black"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:hint="State"
+                            android:singleLine="true" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content">
+                        <EditText android:drawableTint="#898989"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:drawableLeft="@drawable/ic_home"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp" android:id="@+id/rep_flatdoor"
+                            android:hint="Flat Door Block"
+                            android:inputType="text"
+                            android:textSize="13sp" android:padding="7dp"
+                            android:textColor="@color/black"
+                            android:singleLine="true" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <EditText android:id="@+id/rep_building_vill"
+                            android:drawableTint="#898989"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:drawableLeft="@drawable/ic_location_24dp"
+                            android:textSize="13sp" android:padding="7dp"
+                            android:textColor="@color/black"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:hint="Building/Village"
+                            android:singleLine="true" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content">
+                        <EditText android:drawableTint="#898989"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:drawableLeft="@drawable/ic_location_24dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp" android:id="@+id/rep_roadpostoffice"
+                            android:hint="Road/Post office"
+                            android:inputType="text"
+                            android:textSize="13sp" android:padding="7dp"
+                            android:textColor="@color/black"
+                            android:singleLine="true" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <EditText android:id="@+id/rep_taluka"
+                            android:drawableTint="#898989"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:drawableLeft="@drawable/ic_location_24dp"
+                            android:textSize="13sp" android:padding="7dp"
+                            android:textColor="@color/black"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:hint="Area/taluka Subdivison"
+                            android:singleLine="true" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content">
+                        <EditText android:drawableTint="#898989"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:drawableLeft="@drawable/ic_location_24dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp" android:id="@+id/rep_citydistrict"
+                            android:hint="City District"
+                            android:inputType="text"
+                            android:textSize="13sp" android:padding="7dp"
+                            android:textColor="@color/black"
+                            android:singleLine="true" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/reg_btn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:fadingEdgeLength="4dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/drawer"
+                android:drawableRight="@drawable/right_arrow"
+                android:drawableTint="@color/white"
+                android:elevation="20dp"
+                android:text="Submit"
+                android:layout_marginTop="15dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
+
